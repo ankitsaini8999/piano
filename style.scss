@@ -1,0 +1,221 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+main {
+	width: 100vw;
+	height: 100vh;
+	background: linear-gradient(rgba(0, 0, 0, 0.5)), url(4.jpg);
+	background-size: cover;
+	display: flex;
+	align-items: center;
+
+	.loader-text {
+		position: absolute;
+		top: 15%;
+		left: 50%;
+		transform: translate(-50%, -15%);
+		display: flex;
+
+		h1 {
+			font-size: 5rem;
+			letter-spacing: 2rem;
+			color: #ccc;
+		}
+		#word1 {
+			animation: textshadow1 3s linear infinite, moving 1s linear infinite;
+		}
+		#word2 {
+			animation: textshadow1 3s linear infinite, moving 1s 0.1s linear infinite;
+		}
+		#word3 {
+			animation: textshadow1 3s linear infinite, moving 1s linear infinite;
+		}
+		#word4 {
+			animation: textshadow1 3s linear infinite, moving 1s 0.1s linear infinite;
+		}
+		#word5 {
+			animation: textshadow1 3s linear infinite, moving 1s linear infinite;
+		}
+		#word6 {
+			animation: textshadow1 3s linear infinite, moving 1s 0.1s linear infinite;
+		}
+		#word7 {
+			animation: textshadow1 3s linear infinite, moving 1s linear infinite;
+		}
+	}
+
+	.piano {
+		width: 100%;
+		height: 40vh;
+		position: absolute;
+		top: 80%;
+		left: 50%;
+		transform: translate(-50%, -80%);
+
+		.white-row {
+			width: 100vw;
+			height: 40vh;
+			position: absolute;
+			display: flex;
+			justify-content: center;
+
+			span {
+				width: 4%;
+				height: 100%;
+				border-radius: 0 0 10px 10px;
+				box-shadow: inset 1px 1px 1px #000, 1px 1px 1px #000;
+				background: #fff;
+			}
+			span:nth-child(1) {
+				animation: white-key 1s 0.1s linear infinite;
+			}
+			span:nth-child(3) {
+				animation: white-key 2s 0.3s linear infinite;
+			}
+			span:nth-child(6) {
+				animation: white-key 1.5s 0.1s linear infinite;
+			}
+			span:nth-child(9) {
+				animation: white-key 2.5s 0.4s linear infinite;
+			}
+			span:nth-child(12) {
+				animation: white-key 3s 0.2s linear infinite;
+			}
+			span:nth-child(14) {
+				animation: white-key 1.7s 0.4s linear infinite;
+			}
+		}
+
+		.black-row {
+			width: 100vw;
+			height: 40vh;
+			position: absolute;
+			display: flex;
+			justify-content: center;
+
+			span {
+				width: 2.5%;
+				height: 50%;
+				border-radius: 0 0 10px 10px;
+				background: #000;
+			}
+			span:nth-child(even) {
+				margin: 0 1.8% 0 1.8%;
+			}
+			span:nth-child(2) {
+				animation: black-key 1s 0.1s linear infinite;
+			}
+			span:nth-child(5) {
+				animation: black-key 2s 0.3s linear infinite;
+			}
+			span:nth-child(7) {
+				animation: black-key 1.5s 0.1s linear infinite;
+			}
+			span:nth-child(9) {
+				animation: black-key 2.5s 0.4s linear infinite;
+			}
+			span:nth-child(12) {
+				animation: black-key 3s 0.2s linear infinite;
+			}
+			span:nth-child(15) {
+				animation: black-key 1.7s 0.4s linear infinite;
+			}
+		}
+	}
+}
+
+@keyframes white-key {
+	0% {
+		box-shadow: inset -0px 0px 2px rgba(214, 89, 16, 0.836),
+			inset 0px 0px 2px rgba(214, 89, 16, 0.836);
+		background: rgb(201, 199, 199);
+	}
+	5% {
+		box-shadow: inset -2px 0px 2px rgba(214, 89, 16, 0.836),
+			inset 2px -5px 2px rgba(214, 89, 16, 0.836);
+		background: #fff;
+	}
+	50% {
+		box-shadow: inset -0px 0px 2px rgba(214, 89, 16, 0.836),
+			inset 0px 0px 2px rgba(214, 89, 16, 0.836);
+		background: rgb(201, 199, 199);
+	}
+	55% {
+		box-shadow: inset -2px 0px 2px rgba(214, 89, 16, 0.836),
+			inset 2px -5px 2px rgba(214, 89, 16, 0.836);
+		background: #fff;
+	}
+	100% {
+		box-shadow: inset -0px 0px 2px rgba(214, 89, 16, 0.836),
+			inset 0px 0px 2px rgba(214, 89, 16, 0.836);
+		background: rgb(201, 199, 199);
+	}
+}
+@keyframes black-key {
+	0% {
+		box-shadow: inset -0px 0px 2px rgba(25, 221, 235, 0.836),
+			inset 0px 0px 2px rgba(25, 221, 235, 0.836);
+		background: rgb(31, 30, 30);
+	}
+	5% {
+		box-shadow: inset -2px 0px 2px rgba(25, 221, 235, 0.836),
+			inset 2px -5px 2px rgba(25, 221, 235, 0.836);
+	}
+	40% {
+		box-shadow: inset -0px 0px 2px rgba(25, 221, 235, 0.836),
+			inset 0px 0px 2px rgba(25, 221, 235, 0.836);
+		background: rgb(31, 30, 30);
+	}
+	45% {
+		box-shadow: inset -2px 0px 2px rgba(25, 221, 235, 0.836),
+			inset 2px -5px 2px rgba(25, 221, 235, 0.836);
+	}
+	100% {
+		box-shadow: inset -0px 0px 2px rgba(25, 221, 235, 0.836),
+			inset 0px 0px 2px rgba(25, 221, 235, 0.836);
+		background: rgb(31, 30, 30);
+	}
+}
+
+@keyframes textshadow1 {
+	0% {
+		text-shadow: 0px 0px 5px #000;
+	}
+	25% {
+		text-shadow: 1px 1px 1px rgb(194, 235, 15), 2px 2px 1px rgb(194, 235, 15),
+			3px 3px 1px rgb(194, 235, 15), 4px 4px 1px rgb(194, 235, 15),
+			5px 5px 1px rgb(194, 235, 15), 6px 6px 1px rgb(194, 235, 15),
+			7px 7px 1px rgb(194, 235, 15), 8px 8px 1px rgb(194, 235, 15);
+	}
+	50% {
+		text-shadow: 0px 1px 1px rgb(10, 202, 250), 0px 2px 1px rgb(10, 202, 250),
+			0px 3px 1px rgb(10, 202, 250), 0px 4px 1px rgb(10, 202, 250),
+			0px 5px 1px rgb(10, 202, 250), 0px 6px 1px rgb(10, 202, 250),
+			0px 7px 1px rgb(10, 202, 250), 0px 8px 1px rgb(10, 202, 250);
+	}
+	75% {
+		text-shadow: -1px 1px 1px rgb(245, 12, 225), -2px 2px 1px rgb(245, 12, 225),
+			-3px 3px 1px rgb(245, 12, 225), -4px 4px 1px rgb(245, 12, 225),
+			-5px 5px 1px rgb(245, 12, 225), -6px 6px 1px rgb(245, 12, 225),
+			-7px 7px 1px rgb(245, 12, 225), -8px 8px 1px rgb(245, 12, 225);
+	}
+	100% {
+		text-shadow: 0px 0px 5px #000;
+	}
+}
+@keyframes moving {
+	0% {
+		margin-top: 0px;
+	}
+	25% {
+		margin-top: -5px;
+	}
+	50% {
+		margin-top: 5px;
+	}
+	100% {
+		margin-top: 0px;
+	}
+}
